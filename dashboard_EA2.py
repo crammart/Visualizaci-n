@@ -19,29 +19,6 @@ def load_data():
 
 df_retail = load_data()
 
-# Filtros en fila superior
-#colf1, colf2, colf3 = st.columns(3)
-#with colf1:
-#    os_filter = st.multiselect(
-#        "Sistema operativo",
-#        options=df["Operating System"].unique(),
-#        default=df["Operating System"].unique()
-#    )
-#
-#with colf2:
-#    gender_filter = st.multiselect(
-#        "Género",
-#        options=df["Gender"].unique(),
-#        default=df["Gender"].unique()
-#    )
-#
-#with colf3:
-#    behavior_filter = st.multiselect(
-#        "Clase de comportamiento",
-#        options=sorted(df["User Behavior Class"].unique()),
-#        default=sorted(df["User Behavior Class"].unique())
-#    )
-
 ven_gan_mes_filter = st.sidebar.multiselect(
     "Ventas y Ganancias por Mes",
     options=sorted(df_retail["mes_pedido"].unique()),
@@ -80,7 +57,6 @@ with col1:
     st.metric("💰 Ventas", df_filtered['Ventas'].sum())
 with col2:
     st.metric("💱 Ganancias", (df_filtered['Ganancia'].sum()))
-
 
 # Fila 1
 colv1, colv2 = st.columns(2)
