@@ -13,7 +13,6 @@ st.title("💲 Dashboard Ventas Retail Mexico")
 def load_data():
     url = "https://docs.google.com/spreadsheets/d/1oS1OgbYcYaKLuBdjpA2T9PCnxjtTe-Um/edit?usp=sharing&ouid=105963250605137917591&rtpof=true&sd=true"
     path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
-    #path = 'user_behavior_dataset.csv'
     df = pd.read_excel(path)
     return df
 
